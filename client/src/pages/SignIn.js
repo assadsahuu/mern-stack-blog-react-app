@@ -27,11 +27,11 @@ export default function SignIn() {
             
             <div >
               <Label value='Email'></Label>
-              <TextInput type='text' placeholder='Name@company.com' id='email' />
+              <TextInput type='email' placeholder='Name@company.com' id='email' />
             </div>
             <div >
               <Label value='Password'></Label>
-              <TextInput type='text' placeholder='Password' id='password' />
+              <TextInput autoComplete='password' type='password' placeholder='Password' id='password' />
             </div>
            
               <Button className='sm' gradientDuoTone='purpleToBlue' type='submit' pill outline>SignIn</Button>

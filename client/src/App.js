@@ -1,4 +1,4 @@
-import {BrowserRouter,Routes,Route} from  'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 import About from './pages/About'
 import Home from './pages/Home'
@@ -11,14 +11,14 @@ import Header from './components/Header';
 function App() {
   return (
     <BrowserRouter>
-<Header/>
+      <Header />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='About' element={<About/>}/>
-        <Route path='Dashboard' element={<Dashboard/>}/>
-        <Route path='Projects' element={<Projects/>}/>
-        <Route path='SignIn' element={<SignIn/>}/>
-        <Route path='SignUp' element={<SignUp/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='About' element={<About />} />
+        <Route path='Dashboard' element={<Dashboard />} />
+        <Route path='Projects' element={<Projects />} />
+        <Route path='SignIn' element={<SignIn />} />
+        <Route path='SignUp' element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );
