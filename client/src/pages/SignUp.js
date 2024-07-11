@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Link ,useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Label, TextInput, Button, Alert, Spinner } from 'flowbite-react'
+import OAuth from '../components/OAuth';
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setloading] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
   };
@@ -28,8 +29,8 @@ export default function SignUp() {
         return setErrorMessage(data.message);
       }
       setloading(false);
-      if(res.ok){
-        navigate('/SignIn'); 
+      if (res.ok) {
+        navigate('/SignIn');
       }
     } catch (error) {
       setErrorMessage(error.message);
@@ -82,6 +83,7 @@ export default function SignUp() {
                 ) : 'Sign Up'
               }
             </Button>
+            <OAuth></OAuth>
 
           </form>
           <div className='mt-5 flex text-sm gap-2'>

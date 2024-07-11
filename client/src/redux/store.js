@@ -7,7 +7,7 @@ import persistStore from 'redux-persist/es/persistStore';
 
 
 
-const rootReducer = combineReducers({
+const rootReducer= combineReducers({
     user: userReducer,
 });
 const persistConfig = {

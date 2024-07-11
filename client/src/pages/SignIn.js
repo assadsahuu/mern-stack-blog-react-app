@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Label, TextInput, Button, Alert, Spinner } from 'flowbite-react'
 import { useDispatch, useSelector } from 'react-redux'
 import { signInStart, signInSuccess, signInFailure } from '../redux/user/userSlice'
+import OAuth from '../components/OAuth'
 
 
 
@@ -36,7 +37,7 @@ export default function SignIn() {
       if (data.success === false) {
         dispatch(signInFailure(data.message));
       }
-     
+
       if (res.ok) {
         dispatch(signInSuccess(data));
         navigate('/');
@@ -90,13 +91,14 @@ export default function SignIn() {
                 ) : 'Sign In'
               }
             </Button>
+            <OAuth></OAuth>
 
           </form>
           <div className='mt-5 flex text-sm gap-2'>
             <span>
               Don't Have an account?
             </span>
-            <Link to='/SignUn' className='text-blue-500' >     Sign Up </Link>
+            <Link to='/SignUp' className='text-blue-500' >     Sign Up </Link>
           </div>
           {errorMessage && (
             <Alert className="mt-5 " color='failure'>
